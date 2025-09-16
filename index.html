@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Voice Chat (Frontend Only, PeerJS)</title>
+  <title>Multi-User Voice Chat (PeerJS, Frontend Only)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="app">
-    <h1>Voice Chat</h1>
+    <h1>Voice Room</h1>
     <div id="room-form">
       <input type="text" id="room-input" placeholder="Room name or code" maxlength="20" />
       <button id="join-btn">Join / Create Room</button>
@@ -21,6 +21,10 @@
       <div id="status"></div>
       <button id="mute-btn" style="display:none;">Mute</button>
       <button id="unmute-btn" style="display:none;">Unmute</button>
+      <div style="margin-top:16px;">
+        <b>People in room:</b>
+        <ul id="peers-list"></ul>
+      </div>
     </div>
     <footer>
       <small>Frontend-only app using <a href="https://peerjs.com/" target="_blank">PeerJS</a>. <a href="https://github.com/Marjamjelly/marjamjelly.github.io" target="_blank">Source</a></small>
