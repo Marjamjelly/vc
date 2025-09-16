@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Voice Chat (Frontend Only, PeerJS)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Voice Chat</h1>
+    <div id="room-form">
+      <input type="text" id="room-input" placeholder="Room name or code" maxlength="20" />
+      <button id="join-btn">Join / Create Room</button>
+    </div>
+    <div id="chat-ui" style="display:none;">
+      <div>
+        <span id="room-label"></span>
+        <button id="leave-btn">Leave</button>
+      </div>
+      <div id="status"></div>
+      <button id="mute-btn" style="display:none;">Mute</button>
+      <button id="unmute-btn" style="display:none;">Unmute</button>
+    </div>
+    <footer>
+      <small>Frontend-only app using <a href="https://peerjs.com/" target="_blank">PeerJS</a>. <a href="https://github.com/Marjamjelly/marjamjelly.github.io" target="_blank">Source</a></small>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
